@@ -8,8 +8,20 @@
             border: 1px solid black;
             border-collapse: collapse;
         }
+        table{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+        }
         th{
             background: white;
+        }
+        tr:nth-child(even) {
+            background-color:rgb(216, 216, 216);
+        }
+        tr:nth-child(odd) {
+            background-color:rgb(255, 255, 255);
         }
         th, td {
             padding: 10px;
@@ -37,18 +49,20 @@
             <th>No.</th>
             <th>Nama</th>
             <th>Foto</th>
+            <th>JUMLAH KAKI</th>
             <th>Cari di Google</th>
         </tr>
         <?php
-            $data = array('ayam', 'angsa', 'bebek', 'domba', 'kalkun', 'kambing', 'kelinci', 'kerbau', 'kuda', 'sapi');
-
+            $data = array('ayam'=>'2', 'angsa'=>'2', 'bebek'=>'2', 'domba'=>'4', 'kalkun' =>'2', 'kambing'=>'4', 'kelinci'=>'4', 'kerbau'=>'4', 'kuda'=>'4', 'sapi'=>'4');
             $i = 1;
-        foreach($data as $item) {
-            ?>
+            ksort($data);
+            foreach($data as $x => $y) {
+        ?>
             <tr>
             <td><?php echo $i ?>.</td>
-            <td><?php echo $item ?></td>
-            <td><img src="img/<?php echo $item ?>.jpg" alt="gambar ayam"> </td>
+            <td><?php echo $x ?></td>
+            <td><img src="img/<?php echo $x ?>.jpg" alt="gambar <?php echo $x ?>"> </td>
+            <td><?php echo $y ?></td>
             <td><a href="https://www.bing.com/images/search?q=<?php echo $item ?>&form=HDRSC4&first=1">Cari</a></td>
         </tr>
        
