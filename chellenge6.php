@@ -63,7 +63,7 @@
             <td><?php echo $x ?></td>
             <td><img src="img/<?php echo $x ?>.jpg" alt="gambar <?php echo $x ?>"> </td>
             <td><?php echo $y ?></td>
-            <td><a href="https://www.bing.com/images/search?q=<?php echo $item ?>&form=HDRSC4&first=1">Cari</a></td>
+            <td><a href="https://www.bing.com/images/search?q=<?php echo $x ?>&form=HDRSC4&first=1">Cari</a></td>
         </tr>
        
         <?php
